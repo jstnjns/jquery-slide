@@ -47,23 +47,6 @@
 (function($){
 	$.fn.slider = function(settings) {
 		
-		var defaults = {
-			transition		: 'slide', // cut, fade
-			easing			: 'swing', // linear
-			direction		: 'horizontal', // for 'slide' style transition
-			speed			: 500, // for 'slide' and 'fade' style transitions
-			auto			: false,
-			interval		: 2000, // pause between transitions if 'auto' is set to TRUE
-			hoverPause		: true,
-			navigation		: true,
-			buttons			: true,
-			prevText		: 'Previous',
-			nextText		: 'Next',
-			loop			: true
-		};
-		
-		settings = $.extend({}, defaults, settings); 
-		
 		$(this).each(function() {
 			// ----------------------------------------------------------------|| Setting Vars ||
 			var $this = $(this),
@@ -83,6 +66,8 @@
 			auto,
 			
 			_init = function() {
+				
+				settings = $.extend({}, $.fn.slider.defaults, settings);
 									
 				$frames			= $this
 									.children()
@@ -116,7 +101,7 @@
 									.addClass('slider-control-prev')
 									.text(settings.prevText)
 									.click(function(e){ 
-										e.preventDefault()
+										e.preventDefault();
 										
 										if(!$this.hasClass('disabled')) {
 											_transition(currentFrame - 1);
@@ -133,7 +118,18 @@
 											_transition(currentFrame + 1);
 										}
 									});
-								
+									
+					$prev.add($next)
+						.attr('unselectable', 'on')
+						.css({
+							'-moz-user-select':'none',
+							'-webkit-user-select':'none',
+							'user-select':'none'
+						})
+						.each(function() {
+							this.onselectstart = function() { return false; };
+						});
+						
 					$wrapper
 						.prepend($prev)
 						.append($next);
@@ -155,7 +151,6 @@
 											
 											if((i+1) != currentFrame) {
 												_transition(i+1);
-												console.log(i+1);
 											}
 										});
 										
@@ -168,7 +163,7 @@
 							$('<span />')
 								.addClass('title')
 								.text($(frame).attr('title'))
-								.appendTo($tab)
+								.appendTo($tab);
 						}
 										
 						$navigation
@@ -200,9 +195,9 @@
 				
 				// Set dimensions on elements that need sizing
 				$frames.css({
-					width	: frameWidth,
-					height	: frameHeight,
-					float	: 'left'
+					'width'	: frameWidth,
+					'height': frameHeight,
+					'float'	: 'left'
 				});
 				
 				if(settings.transition == 'slide') {
@@ -216,7 +211,7 @@
 						$container.css({
 							width	: boundaryWidth,
 							height	: boundaryHeight * frameCount,
-						overflow: 'hidden'
+							overflow: 'hidden'
 						});
 					}
 				} else {
@@ -320,8 +315,6 @@
 							.removeClass('current')
 							.eq(currentFrame - 1)
 								.addClass('current');
-							
-					console.log(currentFrame - 1);
 				}
 				
 			},
@@ -370,9 +363,24 @@
 				if(settings.auto !== false){
 					clearInterval(auto);
 				}
-			}
+			};
 			
 			_init();
 		});
-	}
+	};
+	
+	$.fn.slider.defaults = {
+		transition		: 'slide', // cut, fade
+		easing			: 'swing', // linear
+		direction		: 'horizontal', // for 'slide' style transition
+		speed			: 500, // for 'slide' and 'fade' style transitions
+		auto			: false,
+		interval		: 2000, // pause between transitions if 'auto' is set to TRUE
+		hoverPause		: true,
+		navigation		: true,
+		buttons			: true,
+		prevText		: 'Previous',
+		nextText		: 'Next',
+		loop			: true
+	};
 })(jQuery);
