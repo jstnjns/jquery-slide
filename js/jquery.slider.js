@@ -1,7 +1,7 @@
 /**
  * This jQuery plugin creates an animated slider with the child elements as frames.
  
- simpleslider
+ slider
 	create/modify/register required markup
 		wrapper - simply wraps all elements, no functionality
 		boundary - encloses all children elements, shows only a single frame
@@ -45,7 +45,7 @@
  *
  */
 (function($){
-	$.fn.simpleslider = function(settings) {
+	$.fn.slider = function(settings) {
 		
 		var defaults = {
 			transition		: 'slide', // cut, fade

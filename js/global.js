@@ -1,28 +1,28 @@
 // JavaScript Document
 
 $(function() {
-	$('#plain ul').simpleslider();
+	$('#plain ul').slider();
 	
-	$('#dark ul').simpleslider({
+	$('#dark ul').slider({
 		speed			: 300,
 		easing			: 'swing'
 	});
 	
-	$('#cautious ul').simpleslider({
+	$('#cautious ul').slider({
 		speed			: 1300,
 		easing			: 'easeOutBounce',
 		prevText		: 'PREV',
 		nextText		: 'NEXT'
 	});
 	
-	$('#forest div').simpleslider({
+	$('#forest div').slider({
 		speed			: 500,
 		transition		: 'fade',
 		auto			: true,
 		navigation		: false
 	});
 	
-	$('#count ol').simpleslider({
+	$('#count ol').slider({
 		transition		: 'cut',
 		navigation		: false,
 		prevText		: '-',
