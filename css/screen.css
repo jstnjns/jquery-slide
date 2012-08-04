@@ -6,10 +6,10 @@ body {
 	font-weight: 300;
 }
 
-.slider-wrapper { overflow: hidden; }
+.slide-wrapper { overflow: hidden; }
 
-.slider-control-prev,
-.slider-control-next { cursor: pointer; }
+.slide-control-prev,
+.slide-control-next { cursor: pointer; }
 
 ul,
 ol,
@@ -23,38 +23,38 @@ li {
 
 #plain { margin-bottom: 50px; }
 
-/* The first slider has no styling */
+/* The first slide has no styling */
 
 /* SECOND */
 
 #dark { margin-bottom: 50px; height: auto; overflow: hidden; }
 
-	#dark .slider-wrapper {
+	#dark .slide-wrapper {
 		position: relative;
 		padding-bottom: 20px;
 		width: 460px;
 	}
 
-	#dark .slider-boundary {
+	#dark .slide-boundary {
 		background: url(../img/dark-background.png) center center repeat-x;
 		width: 400px;
 		float: left;
 	}
-	
-		#dark .slider-control-prev,
-		#dark .slider-control-next {
+
+		#dark .slide-control-prev,
+		#dark .slide-control-next {
 			float: left;
 			background: url(../img/dark-prev.png) right center no-repeat;
 			width: 30px;
 			height: 74px;
 			text-indent: -9999px;
 		}
-		
-		#dark .slider-control-next {
+
+		#dark .slide-control-next {
 			background: url(../img/dark-next.png) left center no-repeat;
 		}
-		
-		#dark .slider-control-navigation {
+
+		#dark .slide-control-navigation {
 			position: absolute;
 			bottom: 0;
 			left: 50%;
@@ -62,8 +62,8 @@ li {
 			width: 100px;
 			text-align: center;
 		}
-		
-			#dark .slider-control-navigation-tab {
+
+			#dark .slide-control-navigation-tab {
 				display: inline-block;
 				background: #999;
 				-moz-border-radius: 5px;
@@ -77,12 +77,12 @@ li {
 				height: 10px;
 				text-indent: -9999px;
 			}
-			
-			#dark .slider-control-navigation-tab.current {
+
+			#dark .slide-control-navigation-tab.current {
 				background: #666;
 			}
-	
-		#dark .slider-slide {
+
+		#dark .slide-slide {
 			padding: 5px 20px;
 			font-size: 20px;
 			font-weight: bold;
@@ -95,37 +95,37 @@ li {
 
 #cautious { margin-bottom: 50px; }
 
-	#cautious .slider-wrapper {
+	#cautious .slide-wrapper {
 		position: relative;
 		padding-bottom: 1em;
 		width: 300px;
 	}
-	
-		#cautious .slider-control-prev,
-		#cautious .slider-control-next {
+
+		#cautious .slide-control-prev,
+		#cautious .slide-control-next {
 			position: absolute;
 			bottom: 0;
 			font-weight: bold;
 		}
-		
-		#cautious .slider-control-next { right: 0; }
-		
-		#cautious .slider-control-navigation-tab {
+
+		#cautious .slide-control-next { right: 0; }
+
+		#cautious .slide-control-navigation-tab {
 			display: inline;
 			margin-right: 0.65em;
 		}
-		
-			#cautious .slider-control-navigation-tab .number { display: none; }
-			
-		#cautious .slider-control-navigation-tab.current { font-weight: bold; }
-		
-		#cautious .slider-control-navigation-tab:last-child { margin-right: 0; }
-	
-		#cautious .slider-container {
+
+			#cautious .slide-control-navigation-tab .number { display: none; }
+
+		#cautious .slide-control-navigation-tab.current { font-weight: bold; }
+
+		#cautious .slide-control-navigation-tab:last-child { margin-right: 0; }
+
+		#cautious .slide-container {
 			background: url(../img/cautious-background.png) center center repeat-x;
 		}
-		
-			#cautious .slider-slide {
+
+			#cautious .slide-slide {
 				padding: 20px;
 				font-size: 16px;
 				font-weight: bold;
@@ -133,19 +133,19 @@ li {
 				line-height: 1.6em;
 				text-shadow: 0 1px 4px rgba(0,0,0,1), 0 1px 1px rgba(0,0,0,1);
 			}
-			
+
 /* FOURTH */
 
 #forest { margin-bottom: 50px; }
-	
-	#forest .slider-wrapper {
+
+	#forest .slide-wrapper {
 		position: relative;
 		padding-bottom: 1em;
 		width: 180px;
 	}
-	
-		#forest .slider-control-prev,
-		#forest .slider-control-next {
+
+		#forest .slide-control-prev,
+		#forest .slide-control-next {
 			position: absolute;
 			top: 0;
 			width: 50%;
@@ -153,34 +153,34 @@ li {
 			text-indent: -9999px;
 			z-index: 100;
 		}
-		
-		#forest .slider-control-next { left: 50%; }
-		
-		#forest .slider-control-prev:hover,
-		#forest .slider-control-next:hover {
+
+		#forest .slide-control-next { left: 50%; }
+
+		#forest .slide-control-prev:hover,
+		#forest .slide-control-next:hover {
 			background: url(../img/forest-prev.png) 25% center no-repeat;
 		}
-		
-		#forest .slider-control-next:hover {
+
+		#forest .slide-control-next:hover {
 			background: url(../img/forest-next.png) 75% center no-repeat;
 		}
 
 /* FIFTH */
 
-#count .slider-wrapper {
+#count .slide-wrapper {
 	font-size: 64px;
 	font-weight: bold;
 }
 
-	#count .slider-control-prev,
-	#count .slider-control-next,
-	#count .slider-boundary,
-	#count .slider-container,
-	#count .slider-slide {
+	#count .slide-control-prev,
+	#count .slide-control-next,
+	#count .slide-boundary,
+	#count .slide-container,
+	#count .slide-slide {
 		float: left;
 		text-align: center;
 	}
-	
+
 
 
 
