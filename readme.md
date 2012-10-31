@@ -8,56 +8,66 @@ Documentation
 
 For the basic implementation, create an element (ie. UL or DIV), and child elements (ie. LI or DIV). NOTE: In the demos there are wrapper DIVs that are only used to style each slider separately.
 
-	<ul>
-	  <li>Frame 1</li>
-	  <li>Frame 2</li>
-	  <li>Frame 3</li>
-	</ul>
+```html
+<ul>
+  <li>Frame 1</li>
+  <li>Frame 2</li>
+  <li>Frame 3</li>
+</ul>
+```
 
 or
-	
-	<div>
-	  <div>Frame 1</div>
-	  <div>Frame 2</div>
-	  <div>Frame 3</div>
-	</div>
+
+```html	
+<div>
+  <div>Frame 1</div>
+  <div>Frame 2</div>
+  <div>Frame 3</div>
+</div>
+```
 
 or even
-	
-	<div>
-	  <img alt="" />
-	  <img alt="" />
-	  <img alt="" />
-	</div>
+
+```html
+<div>
+  <img alt="" />
+  <img alt="" />
+  <img alt="" />
+</div>
+```
 
 ### Implementation
 
 To add a Slider very few lines of code are actually need. Load the jQuery library, be sure to have a simple parent > children structure, and apply the plug-in as follows:
 
-	$(function() {
-	  $('ul').slider();
-	});
+```js
+$(function() {
+  $('ul').slider();
+});
+```
 
 ### Settings
 
 If you wanted to add some settings to further customize your Slider, following are the settings, their defaults, as well as a brief explanation.
 
-	$(function() {
-	  $('ul').slider({
-	    transition : 'slide',
-	    easing : 'swing',
-	    direction : 'horizontal',
-	    speed : 500,
-	    auto : false,
-	    interval : 2000,
-	    hoverPause : true,
-	    navigation : true,
-	    buttons : true,
-	    prevText  : 'Previous',
-	    nextText : 'Next',
-	    loop  : true
-	  });
-	});
+```js
+$(function() {
+  $('ul').slider({
+    transition : 'slide',
+    easing : 'swing',
+    direction : 'horizontal',
+    speed : 500,
+    auto : false,
+    interval : 2000,
+    hoverPause : true,
+    navigation : true,
+    buttons : true,
+    prevText  : 'Previous',
+    nextText : 'Next',
+    loop  : true
+  });
+});
+```
 
 `transition`: You can choose to have it ‘slide‘, ‘fade‘ or just ‘cut‘ between slides. Defaults to ‘slide‘.
 
@@ -86,19 +96,21 @@ If you wanted to add some settings to further customize your Slider, following a
 ### CSS
 
 There are a few changes to the DOM that Slider makes. It uses a very basic naming convention. To modify the CSS, there are a few hooks that will make coding much easier (the classes in parenthesis are conditional).
-	
-	.slider-wrapper {}
-	
-	.slider-control-prev[.disabled] {}
-	
-	.slider-control-next[.disabled] {}
-	
-	.slider-control-navigation {}
-	
-	.slider-control-navigation-tab[.current] {}
-	
-	.slider-boundary {}
-	
-	.slider-container {}
-	
-	.slider-slide {}
+
+```css
+.slider-wrapper {}
+
+  .slider-control-prev[.disabled] {}
+
+  .slider-control-next[.disabled] {}
+
+  .slider-control-navigation {}
+
+    .slider-control-navigation-tab[.current] {}
+
+.slider-boundary {}
+
+  .slider-container {}
+
+    .slider-slide {}
+```
