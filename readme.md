@@ -98,19 +98,19 @@ $(function() {
 There are a few changes to the DOM that Slider makes. It uses a very basic naming convention. To modify the CSS, there are a few hooks that will make coding much easier (the classes in parenthesis are conditional).
 
 ```css
-.slider-wrapper {}
+.slide-wrapper {}
 
-  .slider-control-prev[.disabled] {}
+  .slide-control-prev[.disabled] {}
 
-  .slider-control-next[.disabled] {}
+  .slide-control-next[.disabled] {}
 
-  .slider-control-navigation {}
+  .slide-control-navigation {}
 
-    .slider-control-navigation-tab[.current] {}
+    .slide-control-navigation-tab[.current] {}
 
-.slider-boundary {}
+.slide-boundary {}
 
-  .slider-container {}
+  .slide-container {}
 
-    .slider-slide {}
+    .slide-slide {}
 ```
