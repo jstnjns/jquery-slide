@@ -52,7 +52,7 @@ If you wanted to add some settings to further customize your Slider, following a
 
 ```js
 $(function() {
-  $('ul').slider({
+  $('ul').slide({
     transition : 'slide',
     easing : 'swing',
     direction : 'horizontal',
